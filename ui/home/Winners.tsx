@@ -26,7 +26,11 @@ const Winners = ({ roundId, ...props }: Props) => {
   return (
     <Stack {...props}>
       <Text color="neutral.1">Kết quả</Text>
-      <ScrollTable sizes={[25, 25, 25, 25]}>
+      <ScrollTable
+        minHeight="20rem"
+        backgroundColor="neutral.1"
+        sizes={[25, 25, 25, 25]}
+      >
         <Table.Header>
           <Table.Row>
             <Table.ColumnHeader>Số dự đoán</Table.ColumnHeader>

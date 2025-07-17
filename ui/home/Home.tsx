@@ -99,8 +99,8 @@ const Home = ({}: Props) => {
       />
       <Button
         position="absolute"
-        top="2rem"
-        right="2rem"
+        top="1rem"
+        right="1rem"
         variant="subtle"
         size="lg"
         disabled={!account.isConnected}
@@ -110,8 +110,9 @@ const Home = ({}: Props) => {
         Vé của tôi <LuTickets />
       </Button>
       <VStack
+        width="100%"
         position="absolute"
-        top="50rem"
+        top="35%"
         left="50%"
         transform="translate(-50%, 0%)"
       >
@@ -119,7 +120,7 @@ const Home = ({}: Props) => {
           loading={account.isConnecting || account.isReconnecting}
           hidden={!!account.isConnected}
           variant="subtle"
-          size="xxxl"
+          size="xxl"
           textStyle="175"
           colorScheme="mixed.orange"
           borderRadius={4}
@@ -131,7 +132,7 @@ const Home = ({}: Props) => {
           hidden={!account.isConnected}
           variant="solid"
           colorPalette="blue"
-          size="xxxl"
+          size="xxl"
           textStyle="175"
           borderRadius={4}
           onClick={() => buyLotteryRef.current?.onOpen()}
@@ -159,7 +160,7 @@ const Home = ({}: Props) => {
           </Box>
         </Button>
         {recentRound && (
-          <Alert.Root status="neutral" width="20rem" marginTop="2rem">
+          <Alert.Root status="neutral" width="20rem" marginTop="5rem">
             <Alert.Content textAlign="center">
               <Alert.Title textStyle="1125">Số trúng thưởng:</Alert.Title>
               <Alert.Description
@@ -206,7 +207,11 @@ const Home = ({}: Props) => {
             </Alert.Content>
           </Alert.Root>
         )}
-        <Winners roundId={roundId} marginTop="60rem" />
+        <Winners
+          width="calc(100% - 2rem)"
+          roundId={roundId}
+          marginTop="10rem"
+        />
       </VStack>
     </Stack>
   )
