@@ -1,6 +1,14 @@
 "use client"
 
-import { Alert, Box, Button, Image, Stack, Text } from "@chakra-ui/react"
+import {
+  Alert,
+  Box,
+  Button,
+  Image,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react"
 import BigNumber from "bignumber.js"
 import type { AsyncModalState } from "components/client/modal/AsyncModal.client"
 import { toaster } from "components/server/toast/toast.config"
@@ -101,120 +109,105 @@ const Home = ({}: Props) => {
       >
         Vé của tôi <LuTickets />
       </Button>
-
-      <Button
-        loading={account.isConnecting || account.isReconnecting}
-        hidden={!!account.isConnected}
+      <VStack
         position="absolute"
-        top="45%"
+        top="50rem"
         left="50%"
-        transform="translate(-50%, -50%)"
-        variant="subtle"
-        size="xxxl"
-        textStyle="175"
-        colorScheme="mixed.orange"
-        borderRadius={4}
-        onClick={() => handleConnect()}
+        transform="translate(-50%, 0%)"
       >
-        Kết nối ví
-      </Button>
-      <Button
-        hidden={!account.isConnected}
-        position="absolute"
-        top="45%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-        variant="solid"
-        colorPalette="orange"
-        size="xxxl"
-        textStyle="175"
-        borderRadius={4}
-        onClick={() => buyLotteryRef.current?.onOpen()}
-      >
-        <span>Mua vé</span>
-        <Box
-          position="relative"
-          width={{
-            base: 8,
-            sm: 10,
-          }}
-          flexShrink={0}
+        <Button
+          loading={account.isConnecting || account.isReconnecting}
+          hidden={!!account.isConnected}
+          variant="subtle"
+          size="xxxl"
+          textStyle="175"
+          colorScheme="mixed.orange"
+          borderRadius={4}
+          onClick={() => handleConnect()}
         >
-          <AnimatedLottie
-            pointerEvents="none"
-            left={0}
-            top="50%"
-            transform="translate(-0.75rem, -60%)"
-            position="absolute"
-            zIndex={2}
-            data={cartJSON}
-            boxSize="9rem"
-            alignSelf="flex-end"
-          />
-        </Box>
-      </Button>
-      {recentRound && (
-        <Alert.Root
-          status="neutral"
-          position="absolute"
-          top="37%"
-          left="50%"
-          width="20rem"
-          transform="translate(-50%, -50%)"
+          Kết nối ví
+        </Button>
+        <Button
+          hidden={!account.isConnected}
+          variant="solid"
+          colorPalette="blue"
+          size="xxxl"
+          textStyle="175"
+          borderRadius={4}
+          onClick={() => buyLotteryRef.current?.onOpen()}
         >
-          <Alert.Content textAlign="center">
-            <Alert.Title textStyle="1125">Số trúng thưởng:</Alert.Title>
-            <Alert.Description
-              flexDirection="column"
-              display="flex"
-              alignItems="center"
-              gap={2}
-            >
-              <Text textStyle="225">{recentRound[2]}</Text>
-              <Text
-                display="inline-flex"
-                whiteSpace="nowrap"
-                fontSize="2rem"
-                lineHeight="1"
+          <span>Mua vé</span>
+          <Box
+            position="relative"
+            width={{
+              base: 8,
+              sm: 10,
+            }}
+            flexShrink={0}
+          >
+            <AnimatedLottie
+              pointerEvents="none"
+              left={0}
+              top="50%"
+              transform="translate(-0.75rem, -60%)"
+              position="absolute"
+              zIndex={2}
+              data={cartJSON}
+              boxSize="9rem"
+              alignSelf="flex-end"
+            />
+          </Box>
+        </Button>
+        {recentRound && (
+          <Alert.Root status="neutral" width="20rem" marginTop="2rem">
+            <Alert.Content textAlign="center">
+              <Alert.Title textStyle="1125">Số trúng thưởng:</Alert.Title>
+              <Alert.Description
+                flexDirection="column"
+                display="flex"
+                alignItems="center"
+                gap={2}
               >
-                🎉🎉🎉
-              </Text>
-              {Boolean(winnerData?.[0] || winnerData?.[1]) && (
-                <Button
-                  disabled={winnerData?.[1]}
-                  variant="solid"
-                  colorPalette="blue"
-                  size="lg"
-                  textStyle="1125"
-                  loading={isWithdrawing}
-                  onClick={() =>
-                    writeContractAsync({
-                      address: contract,
-                      abi: abi,
-                      functionName: "withdrawPrize",
-                      args: [recentRoundId],
-                      account: account.address!,
-                    })
-                  }
+                <Text textStyle="225">{recentRound[2]}</Text>
+                <Text
+                  display="inline-flex"
+                  whiteSpace="nowrap"
+                  fontSize="2rem"
+                  lineHeight="1"
                 >
-                  {winnerData?.[1]
-                    ? "Đã nhận"
-                    : `Nhận thưởng ${BigNumber(winnerData![0].toString())
-                        .div(BigNumber(10).pow(18))
-                        .toFormat()} SEI`}
-                </Button>
-              )}
-            </Alert.Description>
-          </Alert.Content>
-        </Alert.Root>
-      )}
-      <Winners
-        roundId={roundId}
-        position="absolute"
-        bottom="5rem"
-        left="2rem"
-        right="2rem"
-      />
+                  🎉🎉🎉
+                </Text>
+                {Boolean(winnerData?.[0] || winnerData?.[1]) && (
+                  <Button
+                    disabled={winnerData?.[1]}
+                    variant="solid"
+                    colorPalette="blue"
+                    size="lg"
+                    textStyle="1125"
+                    loading={isWithdrawing}
+                    onClick={() =>
+                      writeContractAsync({
+                        address: contract,
+                        abi: abi,
+                        functionName: "withdrawPrize",
+                        args: [recentRoundId],
+                        account: account.address!,
+                      })
+                    }
+                  >
+                    {winnerData?.[1]
+                      ? "Đã nhận"
+                      : `Nhận thưởng ${BigNumber(winnerData![0].toString())
+                          .div(BigNumber(10).pow(18))
+                          .toFormat()} SEI`}
+                  </Button>
+                )}
+              </Alert.Description>
+            </Alert.Content>
+          </Alert.Root>
+        )}
+        <Winners roundId={roundId} marginTop="60rem" />
+      </VStack>
     </Stack>
   )
 }
