@@ -14,7 +14,7 @@ import AsyncModal, {
 } from "components/client/modal/AsyncModal.client"
 import { toaster } from "components/server/toast/toast.config"
 import { memo, useCallback } from "react"
-import { Controller, Form, useForm } from "react-hook-form"
+import { Controller, FormProvider, useForm } from "react-hook-form"
 import { multipleRef } from "utils/dom"
 import { writeContract } from "viem/actions"
 import { useAccount, useWalletClient } from "wagmi"
@@ -73,7 +73,7 @@ const BuyLottery = ({ ref }: Props) => {
   }, [])
 
   return (
-    <Form {...form}>
+    <FormProvider {...form}>
       <AsyncModal
         hasCloseButton
         ref={(e) =>
@@ -201,7 +201,7 @@ const BuyLottery = ({ ref }: Props) => {
           />
         </Stack>
       </AsyncModal>
-    </Form>
+    </FormProvider>
   )
 }
 
