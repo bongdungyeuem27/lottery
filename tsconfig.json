@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "types": ["bun", "react", "react-dom", "react/jsx-runtime"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "resolveJsonModule": true,
+    "strict": false,
+    "target": "ESNext",
+    "incremental": true,
+    "stripInternal": true,
+    "moduleDetection": "force",
+    "suppressImplicitAnyIndexErrors": false,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "customConditions": ["source"],
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedSideEffectImports": false,
+    "strictNullChecks": true,
+    "strictFunctionTypes": false,
+    "baseUrl": ".",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {}
+  },
+  "exclude": [
+    "node_modules/**/*",
+    "next-env.d.ts",
+    ".next",
+    "temp",
+    "public",
+    "node_modules"
+  ],
+  "include": [
+    "image.d.ts",
+    "svg.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mts",
+    ".next/types/**/*.ts"
+  ]
+}

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 418 200">
+  <mask id="b" width="418" height="200" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <path fill="#fff" stroke="url(#a)" stroke-width="1.182" d="M.591.591h416.818v198.818H.591z"/>
+  </mask>
+  <g mask="url(#b)">
+    <path fill="#ff83b7" stroke="url(#c)" stroke-width="1.182" d="M.591.591h416.818v198.818H.591z"/>
+    <g filter="url(#d)">
+      <ellipse cx="390.251" cy=".541" fill="#fed7ff" rx="148.189" ry="135.676"/>
+      <path stroke="url(#e)" stroke-width="1.182" d="M390.252-134.544c81.566 0 147.597 60.528 147.597 135.085s-66.031 135.084-147.597 135.084S242.653 75.098 242.653.541s66.032-135.085 147.599-135.085Z"/>
+    </g>
+    <g filter="url(#f)">
+      <ellipse cx="375.492" cy="200.629" fill="#c36aed" rx="125.164" ry="114.595"/>
+      <path stroke="url(#g)" stroke-width="1.182" d="M375.492 86.625c68.849 0 124.572 51.09 124.572 114.004s-55.723 114.003-124.572 114.003-124.573-51.089-124.574-114.003c0-62.914 55.724-114.004 124.574-114.004Z"/>
+    </g>
+    <g filter="url(#h)">
+      <ellipse cx="86.788" cy="150.811" fill="#ff3162" rx="148.189" ry="135.676"/>
+      <path stroke="url(#i)" stroke-width="1.182" d="M86.788 15.726c81.567 0 147.598 60.528 147.598 135.085S168.355 285.895 86.788 285.895c-81.566 0-147.598-60.527-147.598-135.084S5.222 15.726 86.788 15.726Z"/>
+    </g>
+    <g filter="url(#j)">
+      <ellipse cx="125.754" cy="-31.892" fill="#eb72ff" rx="198.963" ry="182.162"/>
+      <path stroke="url(#k)" stroke-width="1.182" d="M125.754-213.463c109.608 0 198.372 81.34 198.372 181.571s-88.764 181.571-198.372 181.571S-72.618 68.339-72.618-31.892s88.764-181.571 198.372-181.571Z"/>
+    </g>
+    <foreignObject width="580.483" height="227.788" x="-80.999" y="58.193">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(40px);clip-path:url(#l);height:100%;width:100%"/>
+    </foreignObject>
+    <path fill="#fff" fill-opacity=".15" stroke="url(#m)" stroke-width="2" d="M.001 139.193h418.483v65.788H.001z" data-figma-bg-blur-radius="80"/>
+  </g>
+  <defs>
+    <linearGradient id="a" x1="0" x2="233.19" y1="-16.197" y2="162.132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="c" x1="0" x2="233.19" y1="-16.197" y2="162.132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="e" x1="242.062" x2="468.01" y1="-157.111" y2="-66.811" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="g" x1="250.328" x2="441.168" y1="67.473" y2="143.743" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="i" x1="-61.401" x2="164.547" y1="-6.841" y2="83.46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="k" x1="-73.209" x2="230.155" y1="-243.559" y2="-122.319" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="m" x1="-.999" x2="59.436" y1="132.704" y2="269.871" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".59"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="d" width="539.921" height="514.893" x="120.291" y="-256.906" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur result="effect1_foregroundBlur_11892_73204" stdDeviation="60.886"/>
+    </filter>
+    <filter id="f" width="493.87" height="472.731" x="128.557" y="-35.737" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur result="effect1_foregroundBlur_11892_73204" stdDeviation="60.886"/>
+    </filter>
+    <filter id="h" width="539.921" height="514.893" x="-183.172" y="-106.636" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur result="effect1_foregroundBlur_11892_73204" stdDeviation="60.886"/>
+    </filter>
+    <filter id="j" width="641.469" height="607.866" x="-194.98" y="-335.825" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur result="effect1_foregroundBlur_11892_73204" stdDeviation="60.886"/>
+    </filter>
+    <clipPath id="l" transform="translate(80.999 -58.193)">
+      <path d="M.001 139.193h418.483v65.788H.001z"/>
+    </clipPath>
+  </defs>
+</svg>
